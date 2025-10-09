@@ -1,0 +1,428 @@
+/* === GLOBAL === */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #F3F4F6;
+  color: #1F2937;
+}
+
+/* === LOGIN PAGE === */
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vh;
+  background: #F3F4F6;
+}
+
+.login-card {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(31, 41, 55, 0.1);
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+}
+
+.login-card h2 {
+  color: #1F2937;
+  margin-bottom: 20px;
+}
+
+.login-card label {
+  display: block;
+  text-align: left;
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #374151;
+}
+
+.login-card input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 18px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.login-card button {
+  background: #14B8A6; /* teal */
+  color: white;
+  font-size: 16px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.3s;
+}
+
+.login-card button:hover {
+  background: #0D9488;
+}
+
+.error {
+  color: #EF4444;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+/* === CONFIGURE PAGE === */
+.configure-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f3f4f6;
+}
+
+.configure-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 400px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.configure-card h2 {
+  color: #1f2937;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.configure-card label {
+  display: block;
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.configure-card input {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.configure-card button {
+  width: 100%;
+  padding: 0.8rem;
+  background: #14b8a6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin-top: 1rem;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.configure-card button:hover {
+  background: #0d9488;
+}
+
+
+
+
+/* === Landing Page === */
+.landing-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 70px); /* leave space for header */
+  padding-top: 20px; /* ✅ add more top space */
+  padding-bottom: 60px;
+  background: #f9fafb;
+}
+
+.landing-card {
+  background: white;
+  padding: 4rem 5rem;           /* ✅ more inner spacing */
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;            /* ✅ use more horizontal space */
+  width: 90%;
+  text-align: center;
+}
+
+.landing-card h1 {
+  font-size: 2.8rem;            /* bigger heading */
+  font-weight: 700;
+  color: #0D9488;
+  margin-bottom: 1rem;
+}
+
+.landing-card p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #374151;
+  margin-bottom: 2rem;
+}
+
+.landing-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.landing-buttons button {
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s, border 0.3s;
+}
+
+.landing-buttons .primary {
+  background: #0D9488;
+  color: white;
+  border: none;
+}
+
+.landing-buttons .primary:hover {
+  background: #0b7d72;
+}
+
+.landing-buttons .secondary {
+  background: transparent;
+  border: 2px solid #0D9488;
+  color: #0D9488;
+}
+
+.landing-buttons .secondary:hover {
+  background: #0D9488;
+  color: white;
+}
+
+
+
+
+/* === CONTACT PAGE === */
+.contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 120px);
+  background: #f9fafb;
+  padding: 0 20px;
+}
+
+.contact-card {
+  background: white;
+  padding: 3rem 4rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
+  width: 100%;
+  text-align: center;
+}
+
+.contact-card h1 {
+  font-size: 2.5rem;
+  color: #0D9488;
+  margin-bottom: 1rem;
+}
+
+.contact-card p {
+  font-size: 1.2rem;
+  color: #374151;
+  margin-bottom: 1.5rem;
+}
+
+.contact-info p {
+  font-size: 1.1rem;
+  color: #1F2937;
+  margin: 0.5rem 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* === CONFIGURE FORM CARD === */
+.configure-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.configure-card {
+  background: #fff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 800px;             /* 💡 increased width */
+  height: 600px;
+  transition: all 0.3s ease;
+}
+
+.configure-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+}
+
+.configure-card h2 {
+  text-align: center;
+  color: #004d40;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+/* === FORM FIELDS === */
+.configure-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+.configure-card label {
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+.configure-card input {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.configure-card input:focus {
+  border-color: #009688;
+}
+
+/* === BUTTON STYLES === */
+.configure-card button {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #009688;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.configure-card button:hover {
+  background-color: #00796b;
+  transform: translateY(-1px);
+}
+
+/* === STATUS MESSAGE === */
+.status {
+  text-align: center;
+  font-weight: 500;
+  color: #00796b;
+  margin-bottom: 15px;
+}
+
+/* === TAB BUTTONS === */
+.tabs-container {
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  padding: 10px;
+  gap: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin: 15px auto;
+  width: fit-content;
+  
+}
+
+.tab-button {
+  border: none;
+  background-color: #e0f2f1;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab-button.active {
+  background-color: #009688;
+  color: white;
+}
+
+.tab-button:hover {
+  background-color: #26a69a;
+  color: white;
+}
+
+/* === LOGOUT BUTTON === */
+.logout-btn {
+  border: none;
+  background-color: #ef5350;
+  color: white;
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 6px rgba(239, 83, 80, 0.3);
+}
+
+.logout-btn:hover {
+  background-color: #d32f2f;
+  transform: translateY(-1px);
+}
+
+/* === DASHBOARD STYLING === */
+
+.dashboard-card {
+  margin: 50px auto;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  padding: 40px 60px;
+  width: 800px;             /* ✅ same width as Configure */
+  max-width: 90vw;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.dashboard-card h2 {
+  color: #004d40;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 25px;
+}
+
+.chart-container {
+  height: 400px;            /* ✅ make chart bigger */
+  width: 100%;
+}
+
+
