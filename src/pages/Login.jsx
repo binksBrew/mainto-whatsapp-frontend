@@ -11,7 +11,7 @@ export default function Login() {
 
     try {
       // ✅ Backend expects JSON: { email, password }
-      const res = await fetch("http://127.0.0.1:8000/login", {
+      const res = await fetch("http://54.91.83.26:8000/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
