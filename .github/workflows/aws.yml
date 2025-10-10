@@ -31,13 +31,12 @@ on:
     branches: [ "main" ]
 
 env:
-  
   AWS_REGION: us-east-1
   ECR_REPOSITORY: mainto-frontend
   ECS_SERVICE: mainto-frontend-service
   ECS_CLUSTER: mainto-cluster
   ECS_TASK_DEFINITION: .aws/task-definition.json
-  CONTAINER_NAME: mainto-frontend-container# containerDefinitions section of your task definition
+  CONTAINER_NAME: mainto-frontend-container  # fixed comment position
 
 permissions:
   contents: read
@@ -69,11 +68,17 @@ jobs:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
         IMAGE_TAG: ${{ github.sha }}
       run: |
-        # Build a docker container and
-        # push it to ECR so that it can
-        # be deployed to ECS.
+        # Build docker image
         docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
+
+        # Tag as 'latest' too
+        docker tag $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG $ECR_REGISTRY/$ECR_REPOSITORY:latest
+
+        # Push both tags
         docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+        docker push $ECR_REGISTRY/$ECR_REPOSITORY:latest
+
+        # Pass the image reference to later steps
         echo "image=$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG" >> $GITHUB_OUTPUT
 
     - name: Fill in the new image ID in the Amazon ECS task definition
@@ -91,3 +96,4 @@ jobs:
         service: ${{ env.ECS_SERVICE }}
         cluster: ${{ env.ECS_CLUSTER }}
         wait-for-service-stability: true
+
