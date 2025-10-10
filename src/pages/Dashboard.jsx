@@ -1,82 +1,3 @@
-// import { useEffect, useState } from "react";
-// import { Bar } from "react-chartjs-2";
-// import "chart.js/auto";
-
-// export default function Dashboard() {
-//   const [chartData, setChartData] = useState(null);
-//   const [loading, setLoading] = useState(true);
-
-//   useEffect(() => {
-//     async function fetchData() {
-//       try {
-//         const token = localStorage.getItem("token");
-//         const res = await fetch("http://127.0.0.1:8000/dashboard-data", {
-//           headers: {
-//             Authorization: `Bearer ${token}`,
-//           },
-//         });
-
-//         const data = await res.json();
-
-//         if (data.status === "ok") {
-//           setChartData({
-//             labels: ["Total Rent Overview"],
-//             datasets: [
-//               {
-//                 label: "Expected Rent (₹)",
-//                 backgroundColor: "#4FC3F7",
-//                 data: [data.expected],
-//               },
-//               {
-//                 label: "Collected Rent (₹)",
-//                 backgroundColor: "#F8BBD0",
-//                 data: [data.collected],
-//               },
-//             ],
-//           });
-//         }
-//       } catch (err) {
-//         console.error("Error fetching dashboard data:", err);
-//       } finally {
-//         setLoading(false);
-//       }
-//     }
-
-//     fetchData();
-//   }, []);
-
-//   if (loading) return <p style={{ textAlign: "center" }}>Loading data...</p>;
-//   if (!chartData) return <p style={{ textAlign: "center" }}>No data available.</p>;
-
-//   return (
-//     <div className="dashboard-card">
-//       <h2>Rent Overview</h2>
-//       <div className="chart-container">
-//         <Bar
-//           data={chartData}
-//           options={{
-//             responsive: true,
-//             maintainAspectRatio: false,
-//             plugins: {
-//               legend: { position: "bottom" },
-//             },
-//           }}
-//           height={300}
-//         />
-//       </div>
-//     </div>
-//   );
-// }
-
-
-
-
-
-
-
-
-
-
 import { useEffect, useState } from "react";
 import { Bar } from "react-chartjs-2";
 import "chart.js/auto";
@@ -89,7 +10,7 @@ export default function Dashboard() {
     async function fetchData() {
       try {
         const token = localStorage.getItem("token");
-        const res = await fetch("http://127.0.0.1:8000/dashboard-data", {
+        const res = await fetch("http://54.91.83.26:8000/dashboard-data", {
           headers: { Authorization: `Bearer ${token}` },
         });
         const data = await res.json();

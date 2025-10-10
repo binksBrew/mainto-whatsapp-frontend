@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://127.0.0.1:8000", // change if backend hosted elsewhere
+  baseURL: "http://54.91.83.26:8000", // change if backend hosted elsewhere
 });
 
 export const login = async (email, password) =>
