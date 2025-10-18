@@ -18,7 +18,7 @@ export default function App() {
       return;
     }
 
-    fetch("http://54.91.83.26:8000/user/form-status", {
+    fetch("https://api.trinetraventures.com/user/form-status", {
       headers: { Authorization: `Bearer ${token}` },
     })
       .then((res) => res.json())
