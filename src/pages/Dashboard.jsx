@@ -10,7 +10,7 @@ export default function Dashboard() {
     async function fetchData() {
       try {
         const token = localStorage.getItem("token");
-        const res = await fetch("http://54.91.83.26:8000/dashboard-data", {
+        const res = await fetch("https://api.trinetraventures.com/dashboard-data", {
           headers: { Authorization: `Bearer ${token}` },
         });
         const data = await res.json();
