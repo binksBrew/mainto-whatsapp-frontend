@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://54.91.83.26:8000", // change if backend hosted elsewhere
+  baseURL: "https://api.trinetraventures.com",
 });
 
 export const login = async (email, password) =>
