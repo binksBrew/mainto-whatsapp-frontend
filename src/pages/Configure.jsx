@@ -19,7 +19,7 @@ export default function Configure() {
 
     async function fetchConfig() {
       try {
-        const res = await fetch("http://54.91.83.26:8000/user/config", {
+        const res = await fetch("https://api.trinetraventures.com/user/config", {
           headers: { Authorization: `Bearer ${token}` },
         });
         if (res.ok) {
@@ -61,7 +61,7 @@ export default function Configure() {
         manager_phone: managerPhone,
       };
 
-      const res = await fetch("http://54.91.83.26:8000/configure-landlord", {
+      const res = await fetch("https://api.trinetraventures.com/configure-landlord", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
