@@ -33,7 +33,7 @@ on:
 env:
   AWS_REGION: us-east-1
   ECR_REPOSITORY: mainto-frontend
-  ECS_SERVICE: mainto-frontend-service
+  ECS_SERVICE: mainto-frontend-task-service-2ttjl863
   ECS_CLUSTER: mainto-cluster
   ECS_TASK_DEFINITION: .aws/task-definition.json
   CONTAINER_NAME: mainto-frontend-container  # fixed comment position
