@@ -6,6 +6,9 @@ import Login from "./pages/Login";
 import Configure from "./pages/Configure";
 import Contact from "./pages/Contact";
 import TabsView from "./pages/TabsView";
+import SecurityPolicy from "./pages/SecurityPolicy";
+import TermsOfService from "./pages/TermsOfService";
+
 
 export default function App() {
   const [isConfigured, setIsConfigured] = useState(false);
@@ -59,6 +62,9 @@ export default function App() {
 
         {/* Default redirect */}
         <Route path="*" element={<Navigate to="/" />} />
+        <Route path="/security-policy" element={<SecurityPolicy />} />
+        <Route path="/terms-of-service" element={<TermsOfService />} />
+        
       </Routes>
     </Router>
   );
