@@ -26,7 +26,8 @@ export default function Header() {
       }}
     >
       <div>Mainto</div>
-
+      
+{!isLoginPage && (
       <div className="header-right" style={{ display: "flex", alignItems: "center" }}>
         <button
           onClick={handleLogout}
@@ -49,6 +50,7 @@ export default function Header() {
           Logout
         </button>
       </div>
+  )}
     </header>
   );
 }
